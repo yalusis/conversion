@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MyApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    *{
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <app-root></app-root>
+
+  <script>
+
+  function myFunction1() {
+    const sel1 = document.querySelector("#first_select").value;
+    const sel2 = document.querySelector("#second_select").value;
+
+    let value_sel1 = 0
+    if(sel1 === "UAH"){
+      value_sel1 = 1
+    } else if(sel1 === "EUR"){
+      value_sel1 = 37.2177
+    } else if(sel1 === "USD"){
+      value_sel1 = 36.5686
+    }
+
+    let value_sel2 = 0
+    if(sel2 === "UAH"){
+      value_sel2 = 1
+    } else if(sel2 === "EUR"){
+      value_sel2 = 37.2177
+    } else if(sel2 === "USD"){
+      value_sel2 = 36.5686
+    }
+
+    const first = document.querySelector("#first").value
+
+    const amount = (value_sel1/value_sel2) * Number(first);
+    console.log(amount)
+
+    document.querySelector("#second").value = amount
+  }
+
+  function myFunction2() {
+    const sel1 = document.querySelector("#first_select").value;
+    const sel2 = document.querySelector("#second_select").value;
+
+    let value_sel1 = 0;
+    if(sel1 === "UAH"){
+      value_sel1 = 1
+    } else if(sel1 === "EUR"){
+      value_sel1 = 37.2177
+    } else if(sel1 === "USD"){
+      value_sel1 = 36.5686
+    }
+
+    let value_sel2 = 0;
+    if(sel2 === "UAH"){
+      value_sel2 = 1
+    } else if(sel2 === "EUR"){
+      value_sel2 = 37.2177
+    } else if(sel2 === "USD"){
+      value_sel2 = 36.5686
+    }
+
+    const second = document.querySelector("#second").value
+
+    const amount = (value_sel2/value_sel1) * Number(second);
+    console.log(amount)
+
+    document.querySelector("#first").value = amount
+  }
+  </script>
+
+</body>
+</html>

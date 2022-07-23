@@ -1,0 +1,31 @@
+<div id="group_currency">
+  <span id="header" *ngFor="let item of currency" >
+    <strong id="name_currency">{{item.name}} </strong>
+    <span>{{item.buy}}</span>
+  </span>
+</div>
+
+<div class="title">
+  {{title}}
+</div>
+
+<div class="title">
+  <div>
+    <select class="element" id="first_select" onchange="myFunction1()">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+    <input class="element" type="number" id="first"  onblur="myFunction1()" placeholder="enter the amount of currency"/>
+  </div>
+  <div>
+    <select class="element" id="second_select" onchange="myFunction2()">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+    <input class="element" type="number" id="second" onchange="myFunction2()" placeholder="enter the amount of currency"/>
+  </div>
+</div>
+
+
